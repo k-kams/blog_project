@@ -4,7 +4,8 @@ FROM python:3.10.4
 MAINTAINER k-kams <jh97.dev@gmail.com>
 # Docker의 컨테이너를 생성 및 관리 하는 사람의 정보를 기입해줍니다.
 
-RUN pip3 install django
+RUN pip3 install django \
+    && python3 -m pip install --upgrade pip
 # python:3.10.4 이미지 상에 django를 pip를 통해 설치합니다.
 
 WORKDIR /usr/src/app
